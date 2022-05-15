@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .card {
+            background-color: whitesmoke;
+            margin-left: 50% !important;
+            transform: translateX(-50%);
+            margin: 20px;
+        }
+        
+        .cal {
+            width: 300px;
+            height: 600px;
+            background-color: rgb(125, 158, 43);
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: 20px;
+            box-shadow: rgb(69, 112, 59) 10px 10px;
+            border-radius: 5%;
+        }
+        
+        .dis {
+            position: relative;
+            background-color: rgb(165, 218, 177);
+            height: 100px;
+            width: 90%;
+            text-align: center;
+            margin: 0px 10px;
+            color: rgb(107, 117, 164);
+            border-radius: 5%;
+        }
+        
+        .disi {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 43px;
+            text-shadow: rgb(121, 202, 236) 3px 3px;
+        }
+        
+        .frow {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 60px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 15px;
+        }
+        
+        .srow {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 15px;
+        }
+        
+        .trow {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 15px;
+        }
+        
+        .ffrow {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 15px;
+        }
+        
+        .sb,
+        .md,
+        .bg {
+            height: 58px;
+            width: 64px;
+            box-shadow: rgb(67, 29, 128) 4px 4px;
+            font-size: 30px;
+            border-radius: 50%;
+        }
+        
+        .sb:hover {
+            background-color: hotpink;
+        }
+        
+        .md:hover {
+            background-color: hotpink;
+        }
+        
+        .bg:hover {
+            background-color: hotpink;
+        }
+        
+        .budis {
+            position: relative;
+        }
+        
+        .haha {
+            position: absolute;
+            background-color: rgb(216, 129, 136);
+            height: 50px;
+            width: 150px;
+            margin-right: 5%;
+            margin-left: 40%;
+            margin-top: 5%;
+            box-shadow: rgb(83, 163, 96) 4px 4px;
+            border-radius: 50%;
+        }
+        
+        .ca {
+            position: absolute;
+            font-size: 30px;
+            color: yellowgreen;
+            text-decoration: yellow;
+            left: 10%;
+            text-shadow: brown 3px 3px;
+        }
+        
+        .hello {
+            position: absolute;
+            text-align: center;
+            color: greenyellow;
+            left: 15px;
+            font-size: 40px;
+        }
+        
+        span {
+            display: inline-block;
+            font-weight: bolder;
+            animation: mover 6s linear infinite;
+        }
+    </style>
+    <title>Document</title>
+    <link rel="stylesheet" href="hi.css">
+</head>
+
+<body>
+    <div class="card">
+        <div class="cal">
+            <input type="text" class="dis" name="input" id="inputField" placeholder="Calculate...">
+
+
+
+            <div class="budis">
+                <div class="haha"></div>
+
+            </div>
+            <div class="frow ,button-container">
+                <div>
+                    <button class="sb" onclick="buttonClicked(7)">7</button>
+                </div>
+                <div>
+                    <button class="sb" onclick="buttonClicked(8)">8</button>
+                </div>
+                <div>
+                    <button class="sb" onclick="buttonClicked(9)">9</button>
+                </div>
+                <div>
+                    <button class="bg" onclick="buttonClicked()">AC</button>
+                </div>
+            </div>
+            <div class="srow , button-container">
+                <div>
+                    <button class="sb" onclick="buttonClicked(4)">4</button>
+                </div>
+                <div>
+                    <button class="sb" onclick="buttonClicked(5)">5</button>
+                </div>
+                <div>
+                    <button class="sb" onclick="buttonClicked(6)">6</button>
+                </div>
+                <div>
+                    <button class="md" onclick="buttonClicked('-')">-</button>
+                </div>
+            </div>
+            <div class="trow ,button-container">
+                <div>
+                    <button class="sb" onclick="buttonClicked(1)">1</button>
+                </div>
+                <div><button class="sb" onclick="buttonClicked(2)">2</button></div>
+                <div>
+                    <button class="sb" onclick="buttonClicked(3)">3</button>
+                </div>
+                <div>
+                    <button class="md" onclick="buttonClicked('+')">+</button>
+                </div>
+            </div>
+            <div class="ffrow ,button-container">
+                <div>
+                    <button class="sb" onclick="buttonClicked('/')">/</button>
+                </div>
+                <div>
+                    <button class="sb" onclick="buttonClicked(0)">0</button>
+                </div>
+                <div><button class="sb" onclick="buttonClicked('*')">*</button></div>
+                <div>
+                    <button class="md" onclick="calculate()">=</button>
+                </div>
+            </div>
+            <div class="budis">
+                <div class="hello">
+                    <span>C</span>
+                    <span>A</span>
+                    <Span>S</Span>
+                    <span>I</span>
+                    <span>N</span>
+                    <span>O</span>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <script type="text/javascript">
+        const numberArray = [];
+        var initialNumber = 0;
+
+        function buttonClicked(number) {
+            switch (number) {
+                case 0:
+                    initialNumber = initialNumber * 10 + number;
+                    document.getElementById('inputField').value = initialNumber;
+                    break;
+                case 1:
+                    initialNumber = initialNumber * 10 + number;
+                    document.getElementById('inputField').value = initialNumber;
+                    break;
+                case 2:
+                    initialNumber = initialNumber * 10 + number;
+                    document.getElementById('inputField').value = initialNumber;
+                    break;
+                case 3:
+                    initialNumber = initialNumber * 10 + number;
+                    document.getElementById('inputField').value = initialNumber;
+                    break;
+                case 4:
+                    initialNumber = initialNumber * 10 + number;
+                    document.getElementById('inputField').value = initialNumber;
+                    break;
+                case 5:
+                    initialNumber = initialNumber * 10 + number;
+                    document.getElementById('inputField').value = initialNumber;
+                    break;
+                case 6:
+                    initialNumber = initialNumber * 10 + number;
+                    document.getElementById('inputField').value = initialNumber;
+                    break;
+                case 7:
+                    initialNumber = initialNumber * 10 + number;
+                    document.getElementById('inputField').value = initialNumber;
+                    break;
+                case 8:
+                    initialNumber = initialNumber * 10 + number;
+                    document.getElementById('inputField').value = initialNumber;
+                    break;
+                case 9:
+                    initialNumber = initialNumber * 10 + number;
+                    document.getElementById('inputField').value = initialNumber;
+                    break;
+                default:
+                    numberArray.push(initialNumber);
+                    numberArray.push(number);
+                    console.log(numberArray);
+                    initialNumber = 0;
+                    break;
+            }
+
+        }
+
+        function calculate() {
+            numberArray.push(initialNumber);
+            result = numberArray[0];
+            for (i = 0; i < numberArray.length; i++) {
+                switch (numberArray[i]) {
+                    case '+':
+                        result = addition(result, numberArray[i + 1]);
+                        break;
+                    case '-':
+                        result = substraction(result, numberArray[i + 1]);
+                        break;
+                    case '*':
+                        result = multiplication(result, numberArray[i + 1]);
+                        break;
+                    case '/':
+                        result = division(result, numberArray[i + 1]);
+                        break;
+                    default:
+                        break;
+                }
+            }
+            console.log(result);
+            document.getElementById('inputField').value = result;
+        }
+
+        function addition(x, y) {
+            res = x + y;
+            return res;
+        }
+
+        function substraction(x, y) {
+            res = x - y;
+            return res;
+        }
+
+        function multiplication(x, y) {
+            res = x * y;
+            return res;
+        }
+
+        function division(x, y) {
+            res = x / y;
+            return res;
+        }
+    </script>
+
+</body>
+
+</html>
